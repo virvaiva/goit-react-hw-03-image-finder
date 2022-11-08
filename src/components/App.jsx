@@ -22,7 +22,7 @@ export class App extends Component {
     alt: '',
     totalImages: 0,
   };
-  photoInfo = event => {
+  imgInfo = event => {
     this.setState({
       largeImageURL: event,
     });
@@ -49,9 +49,7 @@ export class App extends Component {
       });
 
       if (data.totalHits === 0) {
-        toast.error(`Sorry There are no images "${this.state.name}"`, {
-          theme: 'colored',
-        });
+        toast.error(`Sorry There are no images "${this.state.name}"`);
       }
     } catch (error) {
       this.setState({ error });
