@@ -22,7 +22,7 @@ export class App extends Component {
     alt: '',
     totalImages: 0,
   };
-  imgInfo = event => {
+  photoInfo = event => {
     this.setState({
       largeImageURL: event,
     });
@@ -109,7 +109,7 @@ export class App extends Component {
           <ImageGallery
             pictures={pictures}
             showModal={this.togleModal}
-            imgInfo={this.imgInfo}
+            photoInfo={this.photoInfo}
           />
         )}
 

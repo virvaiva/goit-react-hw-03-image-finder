@@ -3,7 +3,7 @@ import * as SC from './ImageGallery.styled';
 import { ImageGalleryItem } from './ImageGalleryItem/ImageGalleryItem';
 import PropTypes from 'prop-types';
 
-export const ImageGallery = ({ pictures, showModal, imgInfo }) => {
+export const ImageGallery = ({ pictures, showModal, photoInfo }) => {
   return (
     <SC.ImageGallery>
       {pictures.map(picture => (
@@ -13,7 +13,7 @@ export const ImageGallery = ({ pictures, showModal, imgInfo }) => {
           tags={picture.tags}
           largeImageURL={picture.largeImageURL}
           showModal={showModal}
-          imgInfo={imgInfo}
+          photoInfo={photoInfo}
         />
       ))}
     </SC.ImageGallery>
@@ -27,7 +27,7 @@ ImageGallery.propTypes = {
   largeImageURL: PropTypes.string,
   tags: PropTypes.string,
   showModal: PropTypes.func,
-  imgInfo: PropTypes.func,
+  photoInfo: PropTypes.func,
 };
 // import { Component } from 'react';
 

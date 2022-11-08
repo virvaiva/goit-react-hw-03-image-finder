@@ -8,7 +8,7 @@ export const ImageGalleryItem = ({
   tags,
   largeImageURL,
   showModal,
-  imgInfo,
+  photoInfo,
 }) => (
   <SC.ImageGallery key={id} onClick={showModal}>
     <SC.GalleryItemImage
@@ -16,7 +16,7 @@ export const ImageGalleryItem = ({
       alt={tags}
       dataLargeimageurl={largeImageURL}
       onClick={() => {
-        imgInfo(largeImageURL);
+        photoInfo(largeImageURL);
       }}
     />
   </SC.ImageGallery>
